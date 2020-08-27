@@ -9,8 +9,7 @@ by Andrea Caputo, Hongwan Liu, Siddharth Mishra-Sharma, Maxim Pospelov, Joshua T
 [![Dark Matter](https://img.shields.io/badge/Matter-Dark-black.svg)](./)
 [![arXiv](https://img.shields.io/badge/arXiv-2008.xxxxx%20-green.svg)](https://arxiv.org/abs/2008.xxxxx)
 
-![Photon spectra](notebooks/plots/dn_domega.png) ![21-cm absorption temperature](notebooks/plots/delta_T_b_2.png)
-
+![Photon spectra](notebooks/plots/dn_domega.png) 
 
 ## Abstract
 
