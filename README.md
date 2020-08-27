@@ -7,7 +7,7 @@ by Andrea Caputo, Hongwan Liu, Siddharth Mishra-Sharma, Maxim Pospelov, Joshua T
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 [![Dark Photons](https://img.shields.io/badge/Photons-Dark-yellowgreen.svg)](./)
 [![Dark Matter](https://img.shields.io/badge/Matter-Dark-black.svg)](./)
-[![arXiv](https://img.shields.io/badge/arXiv-2008.xxxxx%20-green.svg)](https://arxiv.org/abs/2008.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2009.xxxxx%20-green.svg)](https://arxiv.org/abs/2009.xxxxx)
 
 ![Photon spectra](notebooks/plots/dn_domega.png) 
 
