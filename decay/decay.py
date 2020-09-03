@@ -180,7 +180,7 @@ class DecaySpectra(FIRAS):
 
     def get_max_CMB_photon_ratio_FIRAS(self, m_Ap, m_a, tau_a, z_at_which_max=17, **kwargs):
 
-        z_ary, dP_dz_ary, _, _, z_ary_homo, P_ary_homo = self.P_tot_perturb(self.omega_FIRAS, self.eps_base, m_Ap, get_total_prob=1, Ap_DM=0, one_plus_delta_bound=1e2,)
+        z_ary, dP_dz_ary, _, _, z_ary_homo, P_ary_homo = self.P_tot_perturb(self.omega_FIRAS, self.eps_base, m_Ap, get_total_prob=1, Ap_DM=0, one_plus_delta_bound=1e2, z_excise_min=6, z_excise_max=20)
 
         P_ary = (dP_dz_ary[:, 1:] + dP_dz_ary[:, :-1]) / 2.0 * np.diff(z_ary)
         z_res_ary = (z_ary[1:] + z_ary[:-1]) / 2.0
@@ -209,7 +209,7 @@ class DecaySpectra(FIRAS):
 
         omega_0 = self.omega_21 / (1 + z_at_which_max)
 
-        z_ary, dP_dz_ary, _, _, z_ary_homo, P_ary_homo = self.P_tot_perturb([omega_0], eps_max, m_Ap, get_total_prob=1, Ap_DM=0, **kwargs)
+        z_ary, dP_dz_ary, _, _, z_ary_homo, P_ary_homo = self.P_tot_perturb([omega_0], eps_max, m_Ap, z_excise_min=6, z_excise_max=20, get_total_prob=1, Ap_DM=0, **kwargs)
         dP_dz_ary = np.nan_to_num(dP_dz_ary[0])
 
         P_ary = (dP_dz_ary[1:] + dP_dz_ary[:-1]) / 2.0 * np.diff(z_ary)
