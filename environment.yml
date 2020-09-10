@@ -294,6 +294,7 @@ dependencies:
     - cftime==1.0.4.2
     - classy==2.7.2
     - classylss==0.2.9
+    - colossus==1.2.11
     - configparser==4.0.2
     - distro==1.4.0
     - feynman==2.0.2

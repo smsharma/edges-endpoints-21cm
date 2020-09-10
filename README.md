@@ -1,4 +1,4 @@
-# Edges and Endpoints in 21-cm from Resonant Photon Production
+# Edges and Endpoints in 21-cm Observations from Resonant Photon Production
 
 Code repository for the papers
 **Edges and Endpoints in 21-cm from Resonant Photon Production**
@@ -7,7 +7,7 @@ by Andrea Caputo, Hongwan Liu, Siddharth Mishra-Sharma, Maxim Pospelov, Joshua T
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 [![Dark Photons](https://img.shields.io/badge/Photons-Dark-yellowgreen.svg)](./)
 [![Dark Matter](https://img.shields.io/badge/Matter-Dark-black.svg)](./)
-[![arXiv](https://img.shields.io/badge/arXiv-2009.xxxxx%20-green.svg)](https://arxiv.org/abs/2009.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2009.03899%20-green.svg)](https://arxiv.org/abs/2009.03899)
 
 ![Photon spectra](notebooks/plots/dn_domega.png) 
 
@@ -39,13 +39,12 @@ If you use this code, please cite our papers:
 If you use this code, please cite:
 
 ```
-@article{Caputo:2020xxx,
-    author = "Caputo, Andrea and Liu, Hongwan and Mishra-Sharma, Siddharth and Pospelov, Maxim and Ruderman, Joshua T. and Urbano, Alfredo",
-    archivePrefix = "arXiv",
-    eprint = "2009.xxxxx",
-    month = "9",
-    primaryClass = "astro-ph.CO",
-    title = "{Edges and Endpoints in 21-cm from Resonant Photon Production}",
-    year = "2020"
+@misc{caputo2020edges,
+    title={Edges and Endpoints in 21-cm Observations from Resonant Photon Production},
+    author={Andrea Caputo and Hongwan Liu and Siddharth Mishra-Sharma and Maxim Pospelov and Joshua T. Ruderman and Alfredo Urbano},
+    year={2020},
+    eprint={2009.03899},
+    archivePrefix={arXiv},
+    primaryClass={astro-ph.CO}
 }
 ```
