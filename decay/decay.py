@@ -149,6 +149,14 @@ class DecaySpectra(FIRAS):
         """
         return 8 * np.pi * (omega / (2 * np.pi)) ** 2 * 1 / (np.exp(omega / self.T_CMB(z, T_0)) - 1) / (2 * np.pi)
 
+    def T_eg(self, nu):
+        """ Unresolved extragalactic background from https://ui.adsabs.harvard.edu/abs/2008ApJ...682..223G/abstract
+        """
+        beta = -2.7
+        nu_0 = 610 * 1e6 * Hz 
+        T_0 = 880e-3
+        return T_0 * (nu / nu_0) ** beta
+        
     def f_a(self, tau_a, m_a):
         """
         From Eq. 5 of 1803.07048
@@ -219,7 +227,7 @@ class DecaySpectra(FIRAS):
 
         return np.concatenate([z_res_ary, z_ary_homo[0]]), np.concatenate([P_ary, P_ary_homo[0]]), ((dn_A_domega + dn_CMB_domega) / dn_CMB_domega), eps_max
 
-    def get_max_CMB_photon_ratio_z_17(self, m_Ap, m_a, tau_a, use_stellar=1, use_arcade2=1, z_at_which_max=17, sigma=2.0, **kwargs):
+    def get_max_CMB_photon_ratio_z_17(self, m_Ap, m_a, tau_a, use_stellar=1, use_arcade2=1, z_at_which_max=17, sigma=2.0, include_eg=False, **kwargs):
 
         eps_base = 1e-6
 
@@ -249,6 +257,10 @@ class DecaySpectra(FIRAS):
 
             dn_A_domega_ary = np.array(dn_A_domega_ary)
 
+            if include_eg:
+                dn_eg_domega_ary = self.dn_CMB_domega(omega_check_ary, z=0, T_0=self.T_eg(omega_check_ary / (2 * np.pi))) / (eV ** -1)
+                dn_A_domega_ary += dn_eg_domega_ary
+                
             eps_max_ARCADE2 = eps_base * np.sqrt(np.min(dn_CMB_domega_ARCADE2_upper_check / dn_A_domega_ary))
 
             eps_max_list.append(eps_max_ARCADE2)
